@@ -12,6 +12,8 @@ import 'react-dates/lib/css/_datepicker.css'
 
 const store = configureStore()
 
+//console.log('test')
+
 store.subscribe(() =>
 {
     // const state = store.getState()
