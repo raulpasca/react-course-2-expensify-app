@@ -8,7 +8,7 @@ module.exports = (env) => {
   return {
     entry: './src/app.js',
     output: {
-      path: path.join(__dirname, 'public'),
+      path: path.join(__dirname, 'public', 'dist'),
       filename: 'bundle.js'
     },
     module: {
@@ -42,7 +42,8 @@ module.exports = (env) => {
     devtool: isProduction ? 'source-map' : 'inline-source-map',
     devServer: {
       contentBase: path.join(__dirname, 'public'),
-      historyApiFallback: true // For all 404 pages, just send back the html file i.e. redirect to the homepage if the page you tried to navigate to cannot be found/doesnt exist.
+      historyApiFallback: true, // For all 404 pages, just send back the html file i.e. redirect to the homepage if the page you tried to navigate to cannot be found/doesnt exist.
+      publicPath: '/dist/'
     }
   };
 };
