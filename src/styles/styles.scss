@@ -1,0 +1,4 @@
+// A partial file starts with a underscore _, this file contains part of our application styles.
+// When importing a partial, you don't specify the extension (scss) and underscore (_).
+@import './base/settings';
+@import './base/base';
